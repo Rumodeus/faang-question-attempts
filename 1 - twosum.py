@@ -36,16 +36,20 @@ Constraints:
 #im gonna use the example 1 array and mix it up but make it add to 13 for simplicities sake
 #i'll also state if i had to google for help throughout
 
-#did not google for help here
-notfound = True
-nums = [15,7,11,2]; target = 13
+#EASY DIFFICULTY
 
-while notfound == True:
-    for i in range(0, len(nums)):
-        for j in range (i, len(nums)):
-            added = nums[i] + nums[j]
-            if added == 13:
-                print(f"[{i, j}]")
-                notfound = False
-            else:
-                pass
+#did not google for help here
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        notfound = True
+        while notfound == True:
+            for i in range(0, len(nums)):
+                for j in range (i, len(nums)):
+                    added = nums[i] + nums[j]
+                    if added == 13:
+                        print(f"[{i, j}]")
+                        notfound = False
+                    else:
+                        pass
+        
