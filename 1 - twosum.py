@@ -33,7 +33,6 @@ Constraints:
     Only one valid answer exists.
 """
 
-#im gonna use the example 1 array and mix it up but make it add to 13 for simplicities sake
 #i'll also state if i had to google for help throughout
 
 #EASY DIFFICULTY
@@ -42,14 +41,16 @@ Constraints:
 
 class Solution(object):
     def twoSum(self, nums, target):
+        x = [0, 0]
         notfound = True
         while notfound == True:
             for i in range(0, len(nums)):
-                for j in range (i, len(nums)):
+                for j in range (i + 1, len(nums)):
                     added = nums[i] + nums[j]
-                    if added == 13:
-                        print(f"[{i, j}]")
+                    if added == target:
+                        x[0], x[1] = i, j
                         notfound = False
+                        return x
                     else:
                         pass
         
